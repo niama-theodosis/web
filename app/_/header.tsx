@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 import type { HTMLAttributes, Ref } from "react";
 import { MeetingButton } from "./meeting-button";
 import { SocialButtons } from "./social-buttons";
@@ -11,7 +12,7 @@ export const Header = async ({ className, ...props }: HeaderProps) => {
       <div className="mx-auto px-4 py-2 sm:py-4 xl:px-8">
         <div className="flex items-center justify-between">
           <Button variant="link" className="font-heading p-0 text-3xl font-bold text-black hover:no-underline lg:text-4xl" asChild>
-            <a href="/">Theodôsis</a>
+            <Link href="/">Theodôsis</Link>
           </Button>
           <div className="flex items-center gap-1 lg:gap-2">
             <MeetingButton color="primary" size="hybrid" />

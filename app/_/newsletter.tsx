@@ -36,7 +36,8 @@ export function Newsletter({ className }: { className?: string }) {
 
   useEffect(() => {
     if (!state?.status) return;
-    state.status === 201 ? toast.success(messages.get("201")) : toast.error(messages.get(state.status.toString()));
+    if (state.status === 201) toast.success(messages.get("201"));
+    else toast.error(messages.get(state.status.toString()));
     if ([201, 409].includes(state?.status ?? 400)) reset();
   }, [reset, state]);
 
@@ -51,7 +52,7 @@ export function Newsletter({ className }: { className?: string }) {
         <form action={action} onSubmit={formState.isValid ? undefined : handleSubmit(() => true)} className="space-y-8">
           <CardContent className="flex flex-col gap-8">
             <p className="text-center text-xl font-bold italic">
-              Si ces mots font écho, je t'invite à rejoindre La Voix de Theodôsis, ma newsletter.
+              Si ces mots font écho, je t&apos;invite à rejoindre La Voix de Theodôsis, ma newsletter.
             </p>
             <div className="flex flex-col gap-8 sm:flex-row sm:items-start">
               <FormField
@@ -99,7 +100,7 @@ export function Newsletter({ className }: { className?: string }) {
             />
             <Button color="primary" size="lg" disabled={isPending} className="flex gap-2 text-xl">
               {isPending ? <Loader2 className="animate-spin" /> : <Mail className="size-5" />}
-              <span className="font-bold uppercase">Je m'inscris</span>
+              <span className="font-bold uppercase">Je m&apos;inscris</span>
             </Button>
           </CardContent>
         </form>
