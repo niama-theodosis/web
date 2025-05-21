@@ -28,7 +28,7 @@ export const Hero = async ({ className, ...props }: HeroProps) => {
           src={src}
           alt="Murielle Benard"
           placeholder="blur"
-          // priority
+          priority
           // widths={[360, 540, 720, 900, 1080, 1260, 1440]}
           // formats={["avif", "webp"]}
           sizes={`(max-width: 768px) 100vw, (max-width: 1280px) 448px, (max-width: 1536px) 496px, 576px`}
