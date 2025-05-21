@@ -1,4 +1,5 @@
 import { HEADING } from "@/components/ui/typography";
+import src from "@/images/theodosis_murielle_benard.jpeg";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import type { HTMLAttributes } from "react";
@@ -24,9 +25,9 @@ export const Hero = async ({ className, ...props }: HeroProps) => {
       </article>
       <div className="relative flex aspect-square flex-1/3 justify-center md:-mr-8 lg:mr-4">
         <Image
-          src="/images/theodosis_murielle_benard.jpeg"
+          src={src}
           alt="Murielle Benard"
-          fill
+          placeholder="blur"
           // priority
           // widths={[360, 540, 720, 900, 1080, 1260, 1440]}
           // formats={["avif", "webp"]}
