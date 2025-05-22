@@ -1,12 +1,12 @@
-import { H3 } from "@/components/ui/typography";
+import { Heading, HeadingLevel } from "@/components/ui/heading";
 import { cn } from "@/lib/utils";
 import type { HTMLAttributes } from "react";
 
 // ROOT ************************************************************************************************************************************
-export const Feature = async ({ className, items, title }: FeatureProps) => {
+export const Feature = async ({ className, items, level = 3, title }: FeatureProps) => {
   return (
     <section className={cn("prose sm:prose-lg xl:prose-xl", className)}>
-      <H3 text={title} />
+      <Heading level={level} text={title} />
       <ul>
         {items.map((item) => (
           <li key={item}>{item}</li>
@@ -17,4 +17,4 @@ export const Feature = async ({ className, items, title }: FeatureProps) => {
 };
 
 // TYPES ***********************************************************************************************************************************
-export type FeatureProps = HTMLAttributes<HTMLElement> & { items: string[]; title: string };
+export type FeatureProps = HTMLAttributes<HTMLElement> & { items: string[]; level?: HeadingLevel; title: string };

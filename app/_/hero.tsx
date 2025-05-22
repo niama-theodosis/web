@@ -1,5 +1,5 @@
 import src from "@/assets/images/theodosis_murielle_benard.jpeg";
-import { HEADING } from "@/components/ui/typography";
+import { HEADING } from "@/components/ui/heading";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import type { HTMLAttributes } from "react";

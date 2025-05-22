@@ -50,7 +50,7 @@ export default function IndexPage() {
       <Hero className="px-4 sm:px-8 lg:container lg:mx-auto" />
       <section className="bg-gray-200 pt-8 lg:pb-8">
         <div className="mx-auto flex flex-col justify-between gap-8 lg:container lg:flex-row lg:px-8 xl:items-center">
-          <Feature {...data.main} className="px-4 sm:px-8 lg:px-0" />
+          <Feature level={2} {...data.main} className="px-4 sm:px-8 lg:px-0" />
           <Newsletter className="z-10 h-full lg:-mt-12" />
         </div>
       </section>
