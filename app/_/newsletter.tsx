@@ -92,13 +92,13 @@ export function Newsletter({ className }: { className?: string }) {
                     <Input placeholder="Ton courriel" {...field} />
                   </FormControl>
                   <FormDescription className="text-white italic">
-                    Ton courriel est utilisé uniquement pour t’envoyer La Voix de Theodôsis
+                    Ton courriel est utilisé uniquement pour t’envoyer <b>La Voix de Theodôsis</b>
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
             />
-            <Button color="primary" size="lg" disabled={isPending} className="flex gap-2 text-xl">
+            <Button color="primary" size="lg" disabled={isPending} className="flex cursor-pointer gap-2 text-xl">
               {isPending ? <Loader2 className="animate-spin" /> : <Mail className="size-5" />}
               <span className="font-bold uppercase">Je m&apos;inscris</span>
             </Button>
