@@ -3,10 +3,10 @@ import { cn } from "@/lib/utils";
 import type { HTMLAttributes } from "react";
 
 // ROOT ************************************************************************************************************************************
-export const Block = async ({ className, items, text }: BlockProps) => {
+export const Feature = async ({ className, items, title }: FeatureProps) => {
   return (
     <section className={cn("prose sm:prose-lg xl:prose-xl", className)}>
-      <H3 text={text} />
+      <H3 text={title} />
       <ul>
         {items.map((item) => (
           <li key={item}>{item}</li>
@@ -17,4 +17,4 @@ export const Block = async ({ className, items, text }: BlockProps) => {
 };
 
 // TYPES ***********************************************************************************************************************************
-export type BlockProps = HTMLAttributes<HTMLElement> & { items: string[]; text: string };
+export type FeatureProps = HTMLAttributes<HTMLElement> & { items: string[]; title: string };

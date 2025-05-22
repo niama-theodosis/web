@@ -1,7 +1,9 @@
 import { z } from "zod";
 
+// CONST ***********************************************************************************************************************************
 export const ERROR_EXISTING = "b8559cec-4cad-4b9a-b357-17757d34c9ed";
 
+// SCHEMAS *********************************************************************************************************************************
 export const zContactValues = z.object({
   email: z.string().email({ message: "Ce courriel est invalide" }),
   firstname: z.string().min(1, { message: "Ce champ est requis" }).min(2, { message: "Ce champ est trop court (2 min)" }),

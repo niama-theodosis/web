@@ -17,7 +17,7 @@ const messages = new Map(
   Object.entries({
     409: "Ton inscription est déja effective.",
     400: "Une erreur est survenue lors de votre inscription",
-    201: "Ton inscription à La Voix de Theodôsis est confirmée",
+    201: "Merci pour ton inscription à La Voix de Theodôsis",
   }),
 );
 

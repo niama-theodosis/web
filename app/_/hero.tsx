@@ -1,5 +1,5 @@
+import src from "@/assets/images/theodosis_murielle_benard.jpeg";
 import { HEADING } from "@/components/ui/typography";
-import src from "@/images/theodosis_murielle_benard.jpeg";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import type { HTMLAttributes } from "react";
@@ -29,8 +29,6 @@ export const Hero = async ({ className, ...props }: HeroProps) => {
           alt="Murielle Benard"
           placeholder="blur"
           priority
-          // widths={[360, 540, 720, 900, 1080, 1260, 1440]}
-          // formats={["avif", "webp"]}
           sizes={`(max-width: 768px) 100vw, (max-width: 1280px) 448px, (max-width: 1536px) 496px, 576px`}
           className="absolute h-full w-full bg-neutral-200 object-cover xl:max-w-xl"
         />
